@@ -1,0 +1,6 @@
+<textarea 
+    pInputTextarea 
+    [ngModel]="inputText"
+    (ngModelChange)="inputTextChange.emit($event)"
+></textarea>
+<p-button label="Send"></p-button>

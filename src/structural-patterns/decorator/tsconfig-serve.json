@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+        "outDir": "build",
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "target": "esnext",
+        "typeRoots": [
+        "node_modules/@types", "src/app/ambient-declarations"
+        ],
+        "baseUrl": "src/app",
+        "paths": {
+            "@modules/*": [ "./modules/*" ]
+        },
+
+        "lib": [ "esnext", "dom" ],
+
+        "sourceMap":    true,
+        "declaration":  false,
+
+        "esModuleInterop":              true, 
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators":       true,
+        "emitDecoratorMetadata":        true,
+        /* Checking severity level */
+        "strict":                           true,
+        "noUnusedLocals":                   true,
+        "noUnusedParameters":               true,
+        "noImplicitAny":                    true,
+        "noImplicitThis":                   true,
+        "noImplicitReturns":                true,
+        "noFallthroughCasesInSwitch":       true,
+        "noStrictGenericChecks":            false,
+        "strictBindCallApply":              true,
+        "strictFunctionTypes":              true,
+        "strictNullChecks":                 true,
+        "strictPropertyInitialization":     true,
+        "allowUnreachableCode":             false,
+        "forceConsistentCasingInFileNames": true,
+        /* Misc */
+        "alwaysStrict": true,
+        "pretty":       true
+
+
+
+
+    },
+    "include": [
+        "main.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}
