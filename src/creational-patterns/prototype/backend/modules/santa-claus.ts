@@ -27,10 +27,8 @@ export class SantaClaus {
 
     deliverPresents() {
         for (const present of this.presents) {
-            Log.info(`${Faker.name.firstName()} got present "${JSON.stringify(present)}"`)
+            Log.info(`${Faker.name.firstName()} got present "${JSON.stringify(present)}"`);
         }
         return this;
     }
-
-
 }

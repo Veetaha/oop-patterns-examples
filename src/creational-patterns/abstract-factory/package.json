@@ -2,13 +2,11 @@
     "name": "basic-ts-nodejs-template",
     "version": "1.0.0",
     "description": "Basic template project to start programming with TypeScript and NodeJS",
-    "main": "build/baackend/app.js",
+    "main": "build/backend/app.ts",
     "scripts": {
-        "clean": "rm -rf build",
-        "build": "npm run clean && cd backend/ && tsc && ef-tspm && cd ../",
-        "start": "node build/backend/app.js",
-        "build-start": "npm run build && npm run start",
-        "test": "mocha build/backend/tests/run-all.js",
+        "dev": "cd backend && ts-node-dev --respawn -r tsconfig-paths/register app.ts",
+        "start": "cd backend && ts-node -r tsconfig-paths/register app.ts",
+        "test": "cd backend && mocha -r ts-node/register -r tsconfig-paths/register tests/run-all.ts",
         "update-deps": "ncu -u && npm install"
     },
     "repository": {
@@ -27,29 +25,30 @@
     },
     "homepage": "https://github.com/Veetaha/basic-ts-nodejs-template#readme",
     "devDependencies": {
-        "@ef-carbon/tspm": "latest",
         "@types/chai": "latest",
         "@types/colors": "latest",
         "@types/dotenv": "latest",
-        "@types/faker": "^4.1.5",
         "@types/lodash": "latest",
         "@types/mathjs": "latest",
         "@types/mocha": "latest",
         "@types/node": "latest",
         "chai": "latest",
         "mocha": "latest",
+        "nodemon": "latest",
         "npm-check-updates": "latest",
-        "typescript": "^3.4.1"
+        "ts-node-dev": "latest",
+        "tslint": "latest",
+        "typescript": "latest"
     },
     "dependencies": {
         "colors": "latest",
         "dotenv": "latest",
-        "faker": "^4.1.0",
-        "lodash": "^4.17.11",
+        "lodash": "latest",
         "mathjs": "latest",
-        "reflect-metadata": "^0.1.13",
+        "reflect-metadata": "latest",
+        "ts-node": "latest",
         "ts-typedefs": "latest",
-        "tslint": "^5.14.0",
+        "tsconfig-paths": "latest",
         "typedi": "^0.8.0",
         "vee-type-safe": "latest"
     }

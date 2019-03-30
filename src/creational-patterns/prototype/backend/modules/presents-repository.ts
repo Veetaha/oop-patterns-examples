@@ -6,7 +6,7 @@ import { Bonbon } from '@modules/bonbon';
 
 @Service()
 export class PresentsRepository {
-    repo = [
+    private readonly repo = [
         new Toy(Faker.address.country(), Faker.name.firstName()),
         new Bonbon(Faker.date.past(), Faker.company.companyName())
     ];

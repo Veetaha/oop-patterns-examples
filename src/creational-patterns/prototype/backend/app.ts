@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { Container } from 'typedi';
 import { SantaClaus } from '@modules/santa-claus';
 
