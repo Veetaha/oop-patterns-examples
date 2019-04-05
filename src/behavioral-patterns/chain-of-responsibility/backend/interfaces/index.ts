@@ -3,7 +3,7 @@ import { Nullable } from '@common/interfaces';
 
 
 export interface WaterSource {
-    successor: Nullable<WaterSource>;
+    successor?: Nullable<WaterSource>;
 
-    getCupOfWater(): void;
+    getCupOfWater(): boolean;
 }

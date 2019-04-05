@@ -1,4 +1,7 @@
 import '@app/polyfills';
-import { Log } from '@modules/debug';
+import { BeveragesMachine } from '@modules/beverages-machine';
 
-Log.info('Hello world!!');
+const bevMachine = new BeveragesMachine;
+
+while (bevMachine.getCupOfTea()) 
+{}
